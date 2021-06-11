@@ -6,145 +6,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .app-container{
+        .app-container {
             display: flex;
             justify-content: center;
-            height: 200px;
+            height: 2rem;
             background-color: #fff;
             text-align: center;
             align-items: center;
         }
-        .app-container li{
+
+        .app-container li {
             list-style: none;
-            width: 50px;
-            padding: 10px;
+            width: .5rem;
+            padding: .2rem;
             color: #fff;
             background-color: #333;
             overflow: hidden;
         }
-        #app .app-btn{
+
+        #app .app-btn {
             text-align: center;
         }
+
         #app .app-btn button {
             position: relative;
             display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid #1FC926;
+            padding: .08rem .16rem;
+            border: .01rem solid #1FC926;
             color: #1FC926;
             background-color: #fff;
         }
+
         #app .app-btn button:active {
             background-color: rgba(0, 0, 0, .1);
         }
+
         .trans-box {
             display: flex;
             flex-direction: column;
         }
+
         .show-warpper {
-            height: 21px;
+            height: .21rem;
             overflow: hidden;
         }
-        .trans-box{
+
+        .trans-box {
             transition: all 0.28s;
         }
-        .list-trans1 .trans-box{
-            transform: translateY(-21px);
+        .trans-box span{
+            display: inline-block;
+            height: 0.21rem;
+            line-height: 0.21rem;
+            font-size: 0.16rem;
         }
-        .list-trans2 .trans-box{
-            transform: translateY(-42px);
+
+        .list-trans1 .trans-box {
+            transform: translateY(-.21rem);
         }
-        .list-trans3 .trans-box{
-            transform: translateY(-63px);
+
+        .list-trans2 .trans-box {
+            transform: translateY(-.42rem);
         }
-        .list-trans4 .trans-box{
-            transform: translateY(-84px);
+
+        .list-trans3 .trans-box {
+            transform: translateY(-.63rem);
         }
-        .list-trans5 .trans-box{
-            transform: translateY(-105px);
+
+        .list-trans4 .trans-box {
+            transform: translateY(-.84rem);
         }
-        .list-trans6 .trans-box{
-            transform: translateY(-126px);
+
+        .list-trans5 .trans-box {
+            transform: translateY(-1.05rem);
         }
-        .list-trans7 .trans-box{
-            transform: translateY(-147px);
+
+        .list-trans6 .trans-box {
+            transform: translateY(-1.26rem);
         }
-        .list-trans8 .trans-box{
-            transform: translateY(-168px);
+
+        .list-trans7 .trans-box {
+            transform: translateY(-1.47rem);
         }
-        .list-trans9 .trans-box{
-            transform: translateY(-189px);
+
+        .list-trans8 .trans-box {
+            transform: translateY(-1.68rem);
         }
-        .list-trans10 .trans-box{
-            transform: translateY(-210px);
+
+        .list-trans9 .trans-box {
+            transform: translateY(-1.89rem);
         }
-        .list-trans11 .trans-box{
-            transform: translateY(-231px);
+
+        .list-trans10 .trans-box {
+            transform: translateY(-2.10rem);
         }
-        .list-trans12 .trans-box{
-            transform: translateY(-252px);
+
+        .list-trans11 .trans-box {
+            transform: translateY(-2.31rem);
         }
-        .list-trans13 .trans-box{
-            transform: translateY(-273px);
+
+        .list-trans12 .trans-box {
+            transform: translateY(-2.52rem);
         }
-        .list-trans14 .trans-box{
-            transform: translateY(-294px);
+
+        .list-trans13 .trans-box {
+            transform: translateY(-2.73rem);
         }
-        .list-trans15 .trans-box{
-            transform: translateY(-315px);
+
+        .list-trans14 .trans-box {
+            transform: translateY(-2.94rem);
         }
-        .list-trans16 .trans-box{
-            transform: translateY(-336px);
+
+        .list-trans15 .trans-box {
+            transform: translateY(-3.15rem);
         }
-        .list-trans17 .trans-box{
-            transform: translateY(-357px);
+
+        .list-trans16 .trans-box {
+            transform: translateY(-3.36rem);
         }
-        .list-trans18 .trans-box{
-            transform: translateY(-378px);
+
+        .list-trans17 .trans-box {
+            transform: translateY(-3.57rem);
         }
-        .list-trans19 .trans-box{
-            transform: translateY(-399px);
+
+        .list-trans18 .trans-box {
+            transform: translateY(-3.78rem);
         }
-        .list-trans20 .trans-box{
-            transform: translateY(-420px);
+
+        .list-trans19 .trans-box {
+            transform: translateY(-3.99rem);
         }
-        .list-trans21 .trans-box{
-            transform: translateY(-441px);
+
+        .list-trans20 .trans-box {
+            transform: translateY(-4.20rem);
         }
-        .list-trans22 .trans-box{
-            transform: translateY(-462px);
+
+        .list-trans21 .trans-box {
+            transform: translateY(-4.41rem);
         }
-        .list-trans23 .trans-box{
-            transform: translateY(-483px);
+
+        .list-trans22 .trans-box {
+            transform: translateY(-4.62rem);
         }
-        .list-trans24 .trans-box{
-            transform: translateY(-504px);
+
+        .list-trans23 .trans-box {
+            transform: translateY(-4.83rem);
         }
-        .list-trans25 .trans-box{
-            transform: translateY(-525px);
+
+        .list-trans24 .trans-box {
+            transform: translateY(-5.04rem);
         }
-        .list-trans26 .trans-box{
-            transform: translateY(-546px);
+
+        .list-trans25 .trans-box {
+            transform: translateY(-5.25rem);
         }
-        .list-trans27 .trans-box{
-            transform: translateY(-567px);
+
+        .list-trans26 .trans-box {
+            transform: translateY(-5.46rem);
         }
-        .list-trans28 .trans-box{
-            transform: translateY(-588px);
+
+        .list-trans27 .trans-box {
+            transform: translateY(-5.67rem);
         }
-        .list-trans29 .trans-box{
-            transform: translateY(-609px);
+
+        .list-trans28 .trans-box {
+            transform: translateY(-5.88rem);
         }
-        .list-trans30 .trans-box{
-            transform: translateY(-630px);
+
+        .list-trans29 .trans-box {
+            transform: translateY(-6.09rem);
         }
-        .list-trans31 .trans-box{
-            transform: translateY(-651px);
+
+        .list-trans30 .trans-box {
+            transform: translateY(-6.30rem);
         }
-        .list-trans32 .trans-box{
-            transform: translateY(-672px);
+
+        .list-trans31 .trans-box {
+            transform: translateY(-6.51rem);
         }
-        .list-trans33 .trans-box{
-            transform: translateY(-693px);
+
+        .list-trans32 .trans-box {
+            transform: translateY(-6.72rem);
+        }
+
+        .list-trans33 .trans-box {
+            transform: translateY(-6.93rem);
         }
     </style>
 </head>
@@ -152,26 +198,48 @@
 <body>
     <div id="app">
         <div class="app-container">
-            <li v-for="(item, index) in dataList" :class="['list' + index, 'list-trans','list-trans'+item]" :key="index">
+            <li v-for="(item, index) in dataList" :class="['list' + index, 'list-trans','list-trans'+item]"
+                :key="index">
                 <div class="show-warpper">
                     <div class="trans-box">
                         <span v-for="val in 34" class="item">{{val - 1}}</span>
                     </div>
                 </div>
-                
+
             </li>
         </div>
         <div class="app-btn">
             <button type="button" @click="getPreNumber">切换</button>
         </div>
     </div>
+    <script>
+        // 设置 rem 函数
+        function setRem() {
+            //根据iphone 6的大小计算
+            // 375 默认大小50rem; 375rem = 7.5rem ;每个元素rem基础上/50
+            let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth
+            // eslint-disable-next-line no-unused-expressions
+            htmlWidth > 750 ? htmlWidth = 750 : null
+            //得到html的Dom元素
+            let htmlDom = document.getElementsByTagName('html')[0]
+            //设置根元素字体大小
+            let l = 100 * Math.min(window.document.documentElement.getBoundingClientRect().width, 750) / 750
+            htmlDom.style.fontSize = l + 'px'
+        }
+        // 初始化
+        setRem()
+        // 改变窗口大小时重新设置 rem
+        window.onresize = function () {
+            setRem()
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script>
         var app = new Vue({
             el: '#app',
             data: {
                 message: 'Hello Vue!',
-                dataList:[0, 0, 0, 0,0,0,0]
+                dataList: [0, 0, 0, 0, 0, 0, 0]
             },
             mounted() {
                 this.getPreNumber()
