@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .app-container{
+            display: flex;
+            justify-content: center;
+            height: 200px;
+            background-color: #fff;
+            text-align: center;
+            align-items: center;
+        }
+        .app-container li{
+            list-style: none;
+            width: 50px;
+            padding: 10px;
+            color: #fff;
+            background-color: #333;
+            overflow: hidden;
+        }
+        #app .app-btn{
+            text-align: center;
+        }
+        #app .app-btn button {
+            position: relative;
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #1FC926;
+            color: #1FC926;
+            background-color: #fff;
+        }
+        #app .app-btn button:active {
+            background-color: rgba(0, 0, 0, .1);
+        }
+        .trans-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .show-warpper {
+            height: 21px;
+            overflow: hidden;
+        }
+        .trans-box{
+            transition: all 0.28s;
+        }
+        .list-trans1 .trans-box{
+            transform: translateY(-21px);
+        }
+        .list-trans2 .trans-box{
+            transform: translateY(-42px);
+        }
+        .list-trans3 .trans-box{
+            transform: translateY(-63px);
+        }
+        .list-trans4 .trans-box{
+            transform: translateY(-84px);
+        }
+        .list-trans5 .trans-box{
+            transform: translateY(-105px);
+        }
+        .list-trans6 .trans-box{
+            transform: translateY(-126px);
+        }
+        .list-trans7 .trans-box{
+            transform: translateY(-147px);
+        }
+        .list-trans8 .trans-box{
+            transform: translateY(-168px);
+        }
+        .list-trans9 .trans-box{
+            transform: translateY(-189px);
+        }
+        .list-trans10 .trans-box{
+            transform: translateY(-210px);
+        }
+        .list-trans11 .trans-box{
+            transform: translateY(-231px);
+        }
+        .list-trans12 .trans-box{
+            transform: translateY(-252px);
+        }
+        .list-trans13 .trans-box{
+            transform: translateY(-273px);
+        }
+        .list-trans14 .trans-box{
+            transform: translateY(-294px);
+        }
+        .list-trans15 .trans-box{
+            transform: translateY(-315px);
+        }
+        .list-trans16 .trans-box{
+            transform: translateY(-336px);
+        }
+        .list-trans17 .trans-box{
+            transform: translateY(-357px);
+        }
+        .list-trans18 .trans-box{
+            transform: translateY(-378px);
+        }
+        .list-trans19 .trans-box{
+            transform: translateY(-399px);
+        }
+        .list-trans20 .trans-box{
+            transform: translateY(-420px);
+        }
+        .list-trans21 .trans-box{
+            transform: translateY(-441px);
+        }
+        .list-trans22 .trans-box{
+            transform: translateY(-462px);
+        }
+        .list-trans23 .trans-box{
+            transform: translateY(-483px);
+        }
+        .list-trans24 .trans-box{
+            transform: translateY(-504px);
+        }
+        .list-trans25 .trans-box{
+            transform: translateY(-525px);
+        }
+        .list-trans26 .trans-box{
+            transform: translateY(-546px);
+        }
+        .list-trans27 .trans-box{
+            transform: translateY(-567px);
+        }
+        .list-trans28 .trans-box{
+            transform: translateY(-588px);
+        }
+        .list-trans29 .trans-box{
+            transform: translateY(-609px);
+        }
+        .list-trans30 .trans-box{
+            transform: translateY(-630px);
+        }
+        .list-trans31 .trans-box{
+            transform: translateY(-651px);
+        }
+        .list-trans32 .trans-box{
+            transform: translateY(-672px);
+        }
+        .list-trans33 .trans-box{
+            transform: translateY(-693px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="app-container">
+            <li v-for="(item, index) in dataList" :class="['list' + index, 'list-trans','list-trans'+item]" :key="index">
+                <div class="show-warpper">
+                    <div class="trans-box">
+                        <span v-for="val in 34" class="item">{{val - 1}}</span>
+                    </div>
+                </div>
+                
+            </li>
+        </div>
+        <div class="app-btn">
+            <button type="button" @click="getPreNumber">切换</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                dataList:[0, 0, 0, 0,0,0,0]
+            },
+            mounted() {
+                this.getPreNumber()
+            },
+            methods: {
+                randomNum(range) {
+                    return Math.floor(Math.random() * range) + 1
+                },
+                getPreNumber() {
+                    let mySet = new Set()
+                    while (mySet.size < 6) {
+                        mySet.add(this.randomNum(33))
+                    }
+                    let result = Array.from(mySet).sort((a, b) => a - b)
+                    result.push(this.randomNum(16))
+                    this.dataList = result
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
